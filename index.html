@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matilde Joyas | Joyas que cuentan historias</title>
+    <meta name="description"
+        content="Matilde Joyas - Joyería elegante en Concepción del Uruguay. Plata 925, diseños únicos y envíos a todo el país.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">MATILDE JOYAS</a>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#coleccion">Colección</a></li>
+                <li><a href="#nosotros">Sobre Mí</a></li>
+                <li><a href="#contacto" class="btn-nav">Contacto</a></li>
+            </ul>
+            <div class="hamburger">
+                <i data-lucide="menu"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="inicio" class="hero">
+        <div class="hero-bg">
+            <div class="overlay"></div>
+        </div>
+        <div class="hero-content fade-in-up">
+            <h1>Joyas que cuentan historias</h1>
+            <p>Descubrí la elegancia de la plata 925 y el diseño exclusivo en cada pieza.</p>
+            <a href="#coleccion" class="btn-primary">Ver Colección</a>
+        </div>
+    </header>
+
+    <!-- Features / Values -->
+    <section class="features">
+        <div class="container feature-grid">
+            <div class="feature-item fade-in">
+                <i data-lucide="truck" class="feature-icon"></i>
+                <h3>Envíos a todo el país</h3>
+                <p>Llevamos la elegancia a la puerta de tu casa, estés donde estés.</p>
+            </div>
+            <div class="feature-item fade-in" style="transition-delay: 0.2s;">
+                <i data-lucide="gem" class="feature-icon"></i>
+                <h3>Plata 925</h3>
+                <p>Calidad garantizada y brillo perdurable en todas nuestras piezas.</p>
+            </div>
+            <div class="feature-item fade-in" style="transition-delay: 0.4s;">
+                <i data-lucide="heart" class="feature-icon"></i>
+                <h3>Diseño con Amor</h3>
+                <p>Cada joya es seleccionada pensando en vos y en tu historia.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collection Preview -->
+    <section id="coleccion" class="collection">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Nuestra Colección</h2>
+                <div class="divider"></div>
+                <p>Piezas únicas para momentos inolvidables</p>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- Using the same image with different crops/styles since generation failed, 
+                     in a real scenario we would have different product images -->
+                <div class="gallery-item fade-in">
+                    <div class="img-wrapper">
+                        <img src="anillos.png" alt="Anillos de plata" style="object-position: center;">
+                    </div>
+                    <div class="item-info">
+                        <h3>Anillos</h3>
+                        <p>Detalles que enamoran</p>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in">
+                    <div class="img-wrapper">
+                        <img src="collares.png" alt="Collares elegantes" style="object-position: center;">
+                    </div>
+                    <div class="item-info">
+                        <h3>Collares</h3>
+                        <p>Sutileza y brillo</p>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in">
+                    <div class="img-wrapper">
+                        <img src="pulseras.png" alt="Pulseras únicas" style="object-position: center;">
+                    </div>
+                    <div class="item-info">
+                        <h3>Pulseras</h3>
+                        <p>Para llevar siempre</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="center-btn">
+                <a href="https://wa.me/5493442622135" target="_blank" class="btn-secondary">Ver Catálogo
+                    Completo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="nosotros" class="about">
+        <div class="container about-container">
+            <div class="about-text fade-in-left">
+                <h2>Sobre Matilde Joyas</h2>
+                <p>Hola, soy <strong>María Sol</strong>. Bienvenidos a este espacio donde la joyería se encuentra con la
+                    emoción.</p>
+                <p>Desde <em>Concepción del Uruguay, Entre Ríos</em>, selecciono y ofrezco joyas que no son solo
+                    accesorios, sino recuerdos tangibles. Mi misión es ayudarte a encontrar esa pieza perfecta que
+                    cuente tu propia historia.</p>
+                <div class="location">
+                    <i data-lucide="map-pin"></i> Alberdi 1649, Concepción del Uruguay
+                </div>
+            </div>
+            <div class="about-image fade-in-right">
+                <!-- Placeholder for a personal photo or another jewelry shot -->
+                <div class="image-frame">
+                    <img src="hero_bg.png" alt="María Sol - Matilde Joyas">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Footer -->
+    <footer id="contacto" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>MATILDE JOYAS</h3>
+                    <p>Joyas que cuentan historias.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://www.instagram.com/matildejoyas_/" target="_blank" class="social-link">
+                        <i data-lucide="instagram"></i> @matildejoyas_
+                    </a>
+                    <a href="https://wa.me/5493442622135" target="_blank" class="social-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21" />
+                            <path
+                                d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1" />
+                        </svg> WhatsApp
+                    </a>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Alberdi+1649+Concepcion+del+Uruguay"
+                        target="_blank" class="social-link">
+                        <i data-lucide="map-pin"></i> Ubicación
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Matilde Joyas. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
