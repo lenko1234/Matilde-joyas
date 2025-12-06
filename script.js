@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Navbar Scroll Effect
     const navbar = document.querySelector('.navbar');
-    
+
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
@@ -40,4 +40,39 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+    // Mobile Menu Toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (hamburger) {
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+
+            // Optional: Toggle icon between menu and close (x)
+            const icon = hamburger.querySelector('i');
+            // Re-run lucide icons if we were dynamically changing the icon name, 
+            // but for simplicity we'll just toggle the class for CSS handling if needed.
+        });
+    }
+
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
+    });
+    // Shimmer Effect Observer
+    const shimmerObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('do-shimmer');
+                shimmerObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.2 });
+
+    // Select elements to shimmer on scroll
+    // Note: We need to add these classes in HTML next
+    const shimmerElements = document.querySelectorAll('.shimmer-block, .shimmer-text');
+    shimmerElements.forEach(el => shimmerObserver.observe(el));
 });

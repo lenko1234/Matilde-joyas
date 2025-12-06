@@ -40,9 +40,9 @@
             <div class="overlay"></div>
         </div>
         <div class="hero-content fade-in-up">
-            <h1>Joyas que cuentan historias</h1>
+            <h1 class="shimmer-text">Joyas que cuentan historias</h1>
             <p>Descubrí la elegancia de la plata 925 y el diseño exclusivo en cada pieza.</p>
-            <a href="#coleccion" class="btn-primary">Ver Colección</a>
+            <a href="#coleccion" class="btn-primary shimmer-block">Ver Colección</a>
         </div>
     </header>
 
@@ -71,7 +71,7 @@
     <section id="coleccion" class="collection">
         <div class="container">
             <div class="section-header fade-in">
-                <h2>Nuestra Colección</h2>
+                <h2 class="shimmer-text">Nuestra Colección</h2>
                 <div class="divider"></div>
                 <p>Piezas únicas para momentos inolvidables</p>
             </div>
@@ -80,7 +80,7 @@
                 <!-- Using the same image with different crops/styles since generation failed, 
                      in a real scenario we would have different product images -->
                 <div class="gallery-item fade-in">
-                    <div class="img-wrapper">
+                    <div class="img-wrapper shimmer-block">
                         <img src="anillos.png" alt="Anillos de plata" style="object-position: center;">
                     </div>
                     <div class="item-info">
@@ -109,7 +109,7 @@
             </div>
 
             <div class="center-btn">
-                <a href="https://wa.me/5493442622135" target="_blank" class="btn-secondary">Ver Catálogo
+                <a href="https://www.instagram.com/matildejoyas_/" target="_blank" class="btn-secondary">Ver Catálogo
                     Completo</a>
             </div>
         </div>
@@ -119,17 +119,17 @@
     <section id="nosotros" class="about">
         <div class="container about-container">
             <div class="about-text fade-in-left">
-                <h2>Sobre Matilde Joyas</h2>
+                <h2 class="shimmer-text">Sobre Matilde Joyas</h2>
                 <p>Hola, soy <strong>María Sol</strong>. Bienvenidos a este espacio donde la joyería se encuentra con la
                     emoción.</p>
                 <p>Desde <em>Concepción del Uruguay, Entre Ríos</em>, selecciono y ofrezco joyas que no son solo
                     accesorios, sino recuerdos tangibles. Mi misión es ayudarte a encontrar esa pieza perfecta que
                     cuente tu propia historia.</p>
-                <div class="location">
+                <div class="location-tag">
                     <i data-lucide="map-pin"></i> Alberdi 1649, Concepción del Uruguay
                 </div>
             </div>
-            <div class="about-image fade-in-right">
+            <div class="about-image fade-in-right shimmer-block">
                 <!-- Placeholder for a personal photo or another jewelry shot -->
                 <div class="image-frame">
                     <!-- Image removed - add your own photo here -->
@@ -138,12 +138,24 @@
         </div>
     </section>
 
+
+    <!-- Map Section -->
+    <section id="ubicacion" class="map-section">
+        <div class="map-container fade-in">
+            <iframe
+                src="https://maps.google.com/maps?q=Alberdi+1649,+Concepci%C3%B3n+del+Uruguay&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
+
     <!-- Contact / Footer -->
     <footer id="contacto" class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <h3>MATILDE JOYAS</h3>
+                    <h3 class="shimmer-text">MATILDE JOYAS</h3>
                     <p>Joyas que cuentan historias.</p>
                 </div>
                 <div class="footer-links">
@@ -158,10 +170,7 @@
                                 d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1" />
                         </svg> WhatsApp
                     </a>
-                    <a href="https://www.google.com/maps/search/?api=1&query=Alberdi+1649+Concepcion+del+Uruguay"
-                        target="_blank" class="social-link">
-                        <i data-lucide="map-pin"></i> Ubicación
-                    </a>
+
                 </div>
             </div>
             <div class="footer-bottom">
