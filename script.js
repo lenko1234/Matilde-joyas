@@ -75,4 +75,25 @@ document.addEventListener('DOMContentLoaded', () => {
     // Note: We need to add these classes in HTML next
     const shimmerElements = document.querySelectorAll('.shimmer-block, .shimmer-text');
     shimmerElements.forEach(el => shimmerObserver.observe(el));
+
+    // Instagram Button - Show when footer is visible
+    const footer = document.querySelector('.footer');
+    const instagramButton = document.querySelector('.instagram-float');
+
+    if (footer && instagramButton) {
+        const footerObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    instagramButton.classList.add('show');
+                } else {
+                    instagramButton.classList.remove('show');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px' // Trigger slightly before footer is fully visible
+        });
+
+        footerObserver.observe(footer);
+    }
 });
