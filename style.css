@@ -261,13 +261,54 @@ section {
 /* Hero Section */
 .hero {
     position: relative;
-    min-height: 70vh;
+    min-height: 100vh;
+    /* Full viewport height */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: radial-gradient(circle at center, #FDFBF7 0%, #EBE5D9 100%);
     overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    /* Subtle background while video loads - no poster to avoid Safari play button */
+    background: linear-gradient(135deg, #FDFBF7 0%, #F5F0E6 100%);
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    object-position: center;
+    /* GPU acceleration for smooth playback */
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Enhanced gradient overlay for better text readability */
+    background: linear-gradient(to bottom,
+            rgba(253, 251, 247, 0.3) 0%,
+            rgba(253, 251, 247, 0.6) 50%,
+            rgba(253, 251, 247, 0.8) 100%);
+    z-index: 1;
 }
 
 .hero-content {
@@ -285,6 +326,8 @@ section {
     margin-bottom: var(--space-6);
     line-height: 1.1;
     color: var(--text-dark);
+    /* Add text shadow for better readability over video */
+    text-shadow: 0 2px 8px rgba(255, 255, 255, 0.8);
 }
 
 .hero p {
@@ -295,6 +338,8 @@ section {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    /* Add text shadow for better readability over video */
+    text-shadow: 0 1px 4px rgba(255, 255, 255, 0.6);
 }
 
 /* Features Block */
@@ -851,8 +896,18 @@ section {
     }
 
     .hero {
-        padding-top: 100px;
-        align-items: flex-start;
-        /* Push content up on mobile */
+        min-height: 100vh;
+        /* Full viewport on mobile too */
+        padding-top: 80px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: clamp(2rem, 8vw, 3rem);
+    }
+
+    .hero p {
+        font-size: 1rem;
     }
 }
