@@ -196,24 +196,45 @@ document.addEventListener('DOMContentLoaded', () => {
     const shimmerElements = document.querySelectorAll('.shimmer-block, .shimmer-text');
     shimmerElements.forEach(el => shimmerObserver.observe(el));
 
-    // Instagram Button - Show when footer is visible
-    const footer = document.querySelector('.footer');
+    // Instagram Button - Show when "Sobre Nosotras" OR footer is visible
+    const aboutSection = document.querySelector('#nosotros');
+    const footerSection = document.querySelector('.footer');
     const instagramButton = document.querySelector('.instagram-float');
 
-    if (footer && instagramButton) {
-        const footerObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    instagramButton.classList.add('show');
-                } else {
-                    instagramButton.classList.remove('show');
-                }
-            });
-        }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px' // Trigger slightly before footer is fully visible
-        });
+    if ((aboutSection || footerSection) && instagramButton) {
+        let aboutVisible = false;
+        let footerVisible = false;
 
-        footerObserver.observe(footer);
+        const updateButtonVisibility = () => {
+            if (aboutVisible || footerVisible) {
+                instagramButton.classList.add('show');
+            } else {
+                instagramButton.classList.remove('show');
+            }
+        };
+
+        if (aboutSection) {
+            const aboutObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    aboutVisible = entry.isIntersecting;
+                    updateButtonVisibility();
+                });
+            }, {
+                threshold: 0.1
+            });
+            aboutObserver.observe(aboutSection);
+        }
+
+        if (footerSection) {
+            const footerObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    footerVisible = entry.isIntersecting;
+                    updateButtonVisibility();
+                });
+            }, {
+                threshold: 0.1
+            });
+            footerObserver.observe(footerSection);
+        }
     }
 });

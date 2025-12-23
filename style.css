@@ -750,9 +750,9 @@ section {
 /* Instagram Floating Button */
 .instagram-float {
     position: fixed;
-    bottom: 30px;
-    right: 110px;
-    /* Positioned to the left of WhatsApp button */
+    bottom: 110px;
+    /* Moved higher - above WhatsApp */
+    right: 30px;
     width: 60px;
     height: 60px;
     background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
@@ -763,15 +763,17 @@ section {
     box-shadow: 0 4px 12px rgba(188, 24, 136, 0.4),
         0 8px 24px rgba(0, 0, 0, 0.15);
     z-index: 999;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.4s ease;
+    /* Smoother transition */
     opacity: 0;
-    transform: scale(0) rotate(-180deg);
+    transform: scale(0.8);
+    /* Start slightly smaller, no rotation */
 }
 
 .instagram-float.show {
     opacity: 1;
-    transform: scale(1) rotate(0deg);
-    animation: bounce-in 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transform: scale(1);
+    /* Simple smooth scale, no bounce */
 }
 
 .instagram-float:hover {
@@ -786,26 +788,6 @@ section {
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
 
-/* Bounce-in animation for Instagram button */
-@keyframes bounce-in {
-    0% {
-        opacity: 0;
-        transform: scale(0) rotate(-180deg);
-    }
-
-    50% {
-        transform: scale(1.15) rotate(10deg);
-    }
-
-    70% {
-        transform: scale(0.95) rotate(-5deg);
-    }
-
-    100% {
-        opacity: 1;
-        transform: scale(1) rotate(0deg);
-    }
-}
 
 /* Pulse effect for extra attention */
 .whatsapp-float::before {
