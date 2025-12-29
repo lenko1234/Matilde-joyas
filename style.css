@@ -508,29 +508,26 @@ section {
 /* Placeholder for About Image - Structured to look intentional */
 .about-image {
     position: relative;
-    padding: var(--space-4);
-    /* Creates a frame effect */
-    border: 1px solid rgba(212, 175, 55, 0.3);
+    /* Frame effect removed to allow full image coverage */
 }
 
 /* This fills the empty space if no image is present */
+/* Image frame fills the container */
 .image-frame {
     width: 100%;
-    aspect-ratio: 3/4;
-    background-color: #E6DCCD;
-    /* Darker cream */
+    aspect-ratio: 4/5;
+    background-color: var(--bg-cream-dark);
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    overflow: hidden;
 }
 
-.image-frame::before {
-    /* Decorative pattern or placeholder styling */
-    content: "M";
-    font-family: var(--font-heading);
-    font-size: 8rem;
-    color: rgba(255, 255, 255, 0.4);
+.image-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* Map Section */
