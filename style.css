@@ -802,14 +802,54 @@ section {
 
 @keyframes pulse-ring {
     0% {
-        transform: translate(-50%, -50%) scale(1);
+        transform: translate(-50%, -50%) scale(0.33);
         opacity: 1;
     }
 
+    80%,
     100% {
-        transform: translate(-50%, -50%) scale(1.5);
+        transform: translate(-50%, -50%) scale(1.2);
         opacity: 0;
     }
+}
+
+/* Noxsites Attribution Button */
+.nox-container {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--space-8);
+    padding-bottom: var(--space-4);
+}
+
+.nox-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 20px;
+    border: 1.5px solid var(--accent-gold);
+    color: var(--accent-gold);
+    border-radius: 50px;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    background: transparent;
+}
+
+.nox-btn:hover {
+    background-color: var(--accent-gold);
+    color: var(--white);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+}
+
+.nox-btn i {
+    width: 14px;
+    height: 14px;
+    stroke-width: 2.5px;
 }
 
 /* Mobile adjustments */
